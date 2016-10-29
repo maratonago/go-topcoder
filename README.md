@@ -5,6 +5,7 @@ go-topcoder is a Go client library for accessing the [Topcoder API][].
 [![license](https://img.shields.io/github/license/maratonago/go-topcoder.svg)](https://github.com/maratonago/go-topcoder/blob/master/LICENSE)
 [![Build Status](https://travis-ci.org/maratonago/go-topcoder.svg?branch=master)](https://travis-ci.org/maratonago/go-topcoder)
 [![Test Coverage](https://coveralls.io/repos/github/maratonago/go-topcoder/badge.svg?branch=master)](https://coveralls.io/github/maratonago/go-topcoder?branch=master)
+[![GoDoc](https://godoc.org/github.com/maratonago/go-topcoder/topcoder?status.svg)](https://godoc.org/github.com/maratonago/go-topcoder/topcoder)
 
 go-topcoder requires Go version 1.6.2 or greater.
 
@@ -37,7 +38,7 @@ func main() {
 }
 ```
 
-Above code would produce the following output:
+Above code would produce an output similar to:
 ```json
 {
   "handle": "paulocezar",
@@ -52,11 +53,6 @@ Above code would produce the following output:
       "name": "Algorithm",
       "rating": 1448,
       "colorStyle": "color: #6666FF"
-    },
-    {
-      "name": "Marathon Match",
-      "rating": 1152,
-      "colorStyle": "color: #00A900"
     }
   ],
   "Achievements": [
@@ -65,68 +61,12 @@ Above code would produce the following output:
       "description": "First Marathon Competition"
     },
     {
-      "date": "2015-08-11T00:00:00.000-04:00",
-      "description": "First Placement"
-    },
-    {
-      "date": "2015-08-11T00:00:00.000-04:00",
-      "description": "First Win"
-    },
-    {
-      "date": "2015-06-05T00:00:00.000-04:00",
-      "description": "First Passing Submission"
-    },
-    {
       "date": "2013-09-17T00:00:00.000-04:00",
       "description": "One Hundred Rated Algorithm Competitions"
     },
     {
       "date": "2013-03-03T00:00:00.000-05:00",
       "description": "Solved Hard Div1 Problem in SRM"
-    },
-    {
-      "date": "2012-09-28T00:00:00.000-04:00",
-      "description": "Fifty Solved Algorithm Problems"
-    },
-    {
-      "date": "2012-09-28T00:00:00.000-04:00",
-      "description": "First Rated Algorithm Competition"
-    },
-    {
-      "date": "2012-09-28T00:00:00.000-04:00",
-      "description": "First SRM Room Win (Any Division)"
-    },
-    {
-      "date": "2012-09-28T00:00:00.000-04:00",
-      "description": "First Solved Algorithm Problem"
-    },
-    {
-      "date": "2012-09-28T00:00:00.000-04:00",
-      "description": "First Successful Challenge"
-    },
-    {
-      "date": "2012-09-28T00:00:00.000-04:00",
-      "description": "Five Rated Algorithm Competitions"
-    },
-    {
-      "date": "2012-09-28T00:00:00.000-04:00",
-      "description": "Five Successful Challenges"
-    },
-    {
-      "date": "2012-09-28T00:00:00.000-04:00",
-      "description": "Solved Hard Div2 Problem in SRM"
-    },
-    {
-      "date": "2012-09-28T00:00:00.000-04:00",
-      "description": "Ten Solved Algorithm Problems"
-    },
-    {
-      "date": "2012-09-28T00:00:00.000-04:00",
-      "description": "Twenty Five Rated Algorithm Competitions"
-    },
-    {
-      "date": "2011-09-27T00:00:00.000-04:00",
-      "description": "First Forum Post"
     }
   ]
 }
