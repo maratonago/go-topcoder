@@ -36,6 +36,7 @@ type Client struct {
 	// Services used for talking to different parts of the Topcoder API.
 	UserProfile *UserProfileApi
 	Members     *MembersApi
+	Data        *DataApi
 }
 
 // Kind of a singleton allowing users to make requests for public data without
@@ -44,12 +45,14 @@ var (
 	client      *Client
 	UserProfile *UserProfileApi
 	Members     *MembersApi
+	Data        *DataApi
 )
 
 func init() {
 	client = NewClient(nil)
 	UserProfile = client.UserProfile
 	Members = client.Members
+	Data = client.Data
 }
 
 // urlParameters adds the parameters in params as URL query parameters to sUrl.
@@ -83,6 +86,7 @@ func NewClient(httpClient *http.Client) *Client {
 	c := &Client{client: httpClient, BaseURL: baseURL, UserAgent: userAgent}
 	c.UserProfile = &UserProfileApi{client: c}
 	c.Members = &MembersApi{client: c}
+	c.Data = &DataApi{client: c}
 	return c
 }
 
@@ -126,7 +130,6 @@ func (c *Client) NewRequest(method, relPath string, body interface{}) (*http.Req
 // interface, the raw response body will be written to v, without attempting to
 // first decode it.
 func (c *Client) Do(req *http.Request, v interface{}) (*Response, error) {
-
 	rawResponse, err := c.client.Do(req)
 	if err != nil {
 		return nil, err
